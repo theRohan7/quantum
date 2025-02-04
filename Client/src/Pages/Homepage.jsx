@@ -73,7 +73,10 @@ const Homepage = () => {
                        {USERS.slice(start, end).map(user => (
                         <tr key={user.id}>
                             <td data-label="#">{user.id}</td>
-                            <td data-label="Name">{user.name}</td>
+                            <td data-label="Name">
+                            <img src={user.profilePicture} alt="" />
+                            {user.name}
+                            </td>
                             <td data-label="Date of Birth">{user.dateOfBirth}</td>
                             <td data-label="Status">{user.status}</td>
                             <td data-label="Action">
